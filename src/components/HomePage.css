@@ -1,0 +1,74 @@
+.menu h2{
+    color: #424141;
+    font-weight: normal;
+    width: auto;
+    text-align: center;
+}
+
+.menu h2:hover{
+    cursor: pointer;
+    color: #a7a5a5;
+}
+
+.navbar{
+    color: #424141;
+    display: grid;
+    font-family: 'Inter', sans-serif;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+
+.navbar .menu{
+    grid-column: 1/3;
+
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#produtos{
+    text-align: right;
+}
+
+#ajuda{
+    text-align: left;
+}
+
+.user{
+    margin-right: 15px;
+}
+
+.user:hover{
+    cursor: pointer;
+    color: #a7a5a5;
+}
+
+.cart{
+    margin-right: 15px;
+}
+
+.cart:hover{
+    cursor: pointer;
+    color: #a7a5a5;
+}
+
+
+
+.banner{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 700px) {
+    #produtos{
+        text-align: center;
+    }
+
+    #ajuda{
+        text-align: center;
+    }
+}

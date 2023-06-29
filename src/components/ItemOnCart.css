@@ -1,0 +1,35 @@
+.onCartItem{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+.onCartItem input{
+    margin: auto;
+    width: 30px;
+}
+
+.onCartItem .qty{
+    margin: auto;
+
+}
+
+.onCartItem .qty label{
+    margin: auto 7px;
+
+}
+
+.onCartItem img{
+    width: 70px;
+}
+
+.onCartItem p{
+    font-size: 17px;
+    margin: auto;
+}
+
+.onCartItem Button{
+    margin: auto;
+    padding: 5px 15px;
+}

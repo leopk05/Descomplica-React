@@ -7,7 +7,11 @@ import {faCartShopping, faUser} from "@fortawesome/free-solid-svg-icons";
 
 
 
-const HomePage = () => {
+const HomePage = (props) => {
+
+    const changeState = () => {
+      props.onChangeState();
+    }
 
     return(
         <div>
@@ -17,7 +21,7 @@ const HomePage = () => {
 
                 <div className="user-cart">
                     <FontAwesomeIcon className="user" icon={faUser} size="2x"/>
-                    <FontAwesomeIcon className="cart" icon={faCartShopping} size="2x"/>
+                    <FontAwesomeIcon className="cart" onClick={changeState} icon={faCartShopping} size="2x"/>
                 </div>
             </nav>
 

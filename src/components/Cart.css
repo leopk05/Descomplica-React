@@ -1,0 +1,28 @@
+.cart-panel {
+    border: 2px solid #A09C99;;
+    border-radius: 14px 0 14px 0;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    background-color: #ECECEC;
+    width: 700px;
+    height: auto;
+}
+
+.cart-panel h1{
+    text-align: center;
+    color: #424141;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+.cart-panel Button{
+    margin: 20px 25px;
+    padding: 7px 15px;
+}
+
+@media (max-width: 700px) {
+    .cart-panel{
+        width: 90%;
+    }
+}

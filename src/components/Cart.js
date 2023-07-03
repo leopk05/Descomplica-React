@@ -1,32 +1,42 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Cart.css"
 import ItemOnCart from "./ItemOnCart";
-import Button from "./Button";
 
 export const Cart = (props) => {
+    let total = 0;
+    props.onCart.forEach(item => total += (item.quantity * item.price))
 
-
-    const [testes, setTestes] = useState("valo 4");
-
-    console.log(testes)
-    const changeTeste = () => {
-        setTestes("valo 5")
+    const getItemToRemove = (id) => {
+        props.toRemoveItem(id)
     }
+
 
     if(props.onCart.length === 0){
         return (
             <div className="cart-panel">
                 <h1>Sem item no carrinho</h1>
-                <Button onClick={props.closeCart}>Fechar</Button>
+                <button onClick={props.closeCart}>Fechar</button>
             </div>
         )
     } else{
         return(
             <div className="cart-panel">
+
                 <h1>No Seu Carrinho</h1>
-                <ItemOnCart imgItem={props.onCart[0].image} title={props.onCart[0].title} price={props.onCart[0].price}/>
-                <ItemOnCart imgItem={props.onCart[1].image} title={props.onCart[1].title} price={props.onCart[1].price}/>
-                <Button onClick={changeTeste}>Fechar</Button>
+                <div className="header">
+                    <p>Nome</p>
+                    <p>Preço</p>
+                    <p className="qty">quantidade</p>
+                </div>
+                {props.onCart.map(item => (
+                    <ItemOnCart removeItem={getItemToRemove} key={item.id} quantity={item.quantity} id={item.id} imgItem={item.image} title={item.title} price={item.price}/>
+                ))}
+                <div className="bot">
+                    <p>Valor Total R$ {total}</p>
+                    <button>Checkout</button>
+                    <button onClick={props.closeCart}>Fechar</button>
+                </div>
+
             </div>
 
         )

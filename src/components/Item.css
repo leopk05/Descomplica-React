@@ -25,10 +25,35 @@
     font-weight: bold;
 }
 
-.card-body Button{
+.card-body .able{
     padding: 10px;
     width: 70%;
     margin-bottom: 20px;
+    color: #424141;
+    border: none;
+    border-radius: 5px;
+    background: #B6C72B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 17px;
+    height: auto;
+}
+
+.unable{
+    background: #A09C99;
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 20px;
+    color: #424141;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 17px;
+    height: auto;
+}
+
+.card-body .able:hover{
+    background: #bed12e;
+    cursor: pointer;
 }
 
 

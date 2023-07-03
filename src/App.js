@@ -92,24 +92,27 @@ const products = [
     }
 ]
 const savedItems = [
-    {
-        id: 0,
-        image: jabulani,
-        title: "Bola Copa 2010 Jabulani",
-        price: 450.00
-    },
-    {
-        id: 1,
-        image: mercurial,
-        title: "Chuteira Nike Mercurial",
-        price: 199.99
-    }
 ]
 
+
 function App() {
-
-
     const [state, setState] = useState(false);
+
+
+    const [cartItem, setCartItem] = useState(savedItems);
+
+    const addToCart = (id) => {
+
+        const item = {
+            ...products[id],
+            quantity: 1
+        }
+
+        setCartItem((prevState) => {
+            return[item, ...prevState];
+        });
+
+    }
 
     const changeState = () =>{
         if (state){
@@ -119,29 +122,47 @@ function App() {
         }
     }
 
-
     const toFalse = () => {
-      console.log(state);
+      setState(false);
     }
 
+    const idToRemove = (id) => {
 
-    console.log(state);
+        let index = -1
+
+        for (let i = 0; i<cartItem.length; i++){
+            if (cartItem[i].id === id){
+                index = i;
+            }
+        }
+
+        if (cartItem.length===1){
+            setCartItem(savedItems);
+        } else {
+            setCartItem(() => {
+                return[ ...cartItem.slice(0, index),
+                    ...cartItem.slice(index + 1)];
+            });
+        }
+
+
+
+
+    }
+
 
 
   return (
     <div className="App">
         <HomePage onChangeState={changeState}/>
-        {state? <Cart onCloseCart={toFalse} onCart={savedItems}/> : ""}
+        {state? <Cart toRemoveItem={idToRemove} closeCart={toFalse} onCart={cartItem}/> : ""}
         <h2>Produtos</h2>
         <div className="card-items">
             {products.map(item => (
-                <Item key={item.id} imgSrc={item.image} title={item.title} price={item.price.toFixed(2)}/>
+                <Item idToRemoveHandle={cartItem} toCart={addToCart} key={item.id} id={item.id} imgSrc={item.image} title={item.title} price={item.price}/>
             ))}
         </div>
-
         <AboutUs/>
-
-
     </div>
   );
 }

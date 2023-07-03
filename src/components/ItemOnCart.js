@@ -1,18 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ItemOnCart.css"
-import Button from "./Button";
 export const ItemOnCart = (props) => {
+
+
+    const [value, setValue] = useState(1);
+
+
+    const changeValue = (e) => {
+        setValue(e.target.value)
+    }
+
+    const onRemoveItem = () => {
+        props.removeItem(props.id);
+    }
+
     return (
         <div className="onCartItem">
             <img src={props.imgItem} alt=""/>
             <p>{props.title}</p>
-            <p>R$ {props.price.toFixed(2)}</p>
-            <div className="qty">
-                <label>Qty</label>
-                <input type="number"/>
-            </div>
-
-            <Button onClick={() => console.log("teste")} >Remover</Button>
+            <p>R$ {props.price}</p>
+            <input type="number" min={0} value={value} onChange={changeValue}/>
+            <button onClick={onRemoveItem}>Remover</button>
         </div>
     )
 }

@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Nuback React Descomplica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Build Process](#what-i-learned)
+- [Author](#author)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Challenge made for Nubank Course. 
 
-### `npm test`
+The challenge is to develop a user-friendly shopping application that enables customers to effortlessly perform key actions. The primary objectives are:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Adding Products to the Cart: Users should be able to easily add products to their shopping cart. The process should be intuitive, providing clear options for adding items with minimal effort.
 
-### `npm run build`
+- Simulating Database Functionality: The application should effectively replicate the functions typically performed by a database. By utilizing an object array, we aim to create a seamless experience where product data is accessed and retrieved as if it were obtained from a real database.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Efficient Data Mapping: The application should efficiently map the data from the object array to the appropriate components. This mapping process should be optimized to accurately represent the product information and maintain optimal performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Viewing Cart Value: Users should have instant visibility into the total value of items in their cart. This real-time update allows users to stay informed about their purchases and make informed decisions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Removing or Adjusting Item Quantity: Users should be able to conveniently remove items from the cart or adjust their quantity. The interface should provide simple and accessible options for modifying the cart contents to suit individual preferences.
 
-### `npm run eject`
+By addressing these challenges effectively, our goal is to create a streamlined shopping experience, maximizing user satisfaction and facilitating smooth transactions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Screenshot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Home Page
+![](./homepage.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Products
+![](./products.jpg)
 
-## Learn More
+- Cart
+![](./cart.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Links
 
-### Code Splitting
+- Live Site URL: [Github Pages](https://leopk05.github.io/Descomplica-React/)
+- Figma Prototype: [Figma Link](https://www.figma.com/file/HjvZtng5Fu77xr8Bw7Ctb9/Wireframe-Site?type=design&mode=design&t=7vOKRQeYlueP5TiF-0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## My process
 
-### Analyzing the Bundle Size
+### Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Figma
+- React Js
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Build Process
 
-### Advanced Configuration
+Building this project has been an incredibly rewarding experience. We had the opportunity to learn and apply our knowledge in various aspects of the development process. The initial prototype, skillfully crafted by Evelyn and Fran using Figma, showcased a stunning and fluid design. It incorporated a range of UI and UX features, including easily accessible buttons and seamless navigation throughout the pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+When it came to the implementation phase, I took charge and successfully developed six key components:
 
-### Deployment
+- Homepage: This component serves as the initial landing page, displaying all the content that loads when the user accesses the website. It does not rely on any prop elements to pass data from the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Products: A single component responsible for loading the object array, which is passed as props from the app to the Products component. By utilizing a mapping function, the Products component dynamically replicates the Product component based on the size of the array.
 
-### `npm run build` fails to minify
+- Cart: The Cart component plays a vital role in calculating and displaying the contents of the shopping cart. It dynamically adjusts its appearance based on the size of the product array: one return style if the array is empty (0 size), and another return style if there are products present. The Cart component also includes essential elements such as a close button, a checkout button, and the total value of the items in the cart.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Item in Cart: This component enhances the display of individual items within the cart area. It provides a visually appealing layout for displaying product images and is repeated for each item, much like the Products component.
+
+- About Us and Contact Area: These two components add an aesthetic touch to the website, contributing to an overall visually appealing and engaging user experience.
+
+Throughout the development process, we have gained valuable insights and honed our skills while creating a beautiful and functional project.
+
+## Author
+
+### Evelyn
+
+- LinkedIn https://www.linkedin.com/in/evelynmatoso/
+
+### Fran
+
+- LinkedIn https://www.linkedin.com/in/franciane-lark/
+- GitHub https://github.com/franciane-lark
+
+### Leo
+
+- LinkedIn https://www.linkedin.com/in/leonardo-weslley/
+- GitHub https://github.com/leopk05
+

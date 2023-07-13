@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Descomplica-React/static/css/main.a6c77a54.css",
+    "main.js": "/Descomplica-React/static/js/main.ab2f36be.js",
+    "static/js/787.8258d309.chunk.js": "/Descomplica-React/static/js/787.8258d309.chunk.js",
+    "static/media/about-us.png": "/Descomplica-React/static/media/about-us.e92652ee1b7e357d7bbc.png",
+    "static/media/banner.jpg": "/Descomplica-React/static/media/banner.782fe917130ac432d030.jpg",
+    "static/media/jabulani.png": "/Descomplica-React/static/media/jabulani.9de4b1b9ea26ba92e432.png",
+    "static/media/basket.png": "/Descomplica-React/static/media/basket.0df33e3d7e6ca7c01290.png",
+    "static/media/bolas.png": "/Descomplica-React/static/media/bolas.f51417868d269ef88edc.png",
+    "static/media/gstate.png": "/Descomplica-React/static/media/gstate.0e22008d7666a0397279.png",
+    "static/media/meia.png": "/Descomplica-React/static/media/meia.c8ddcefe62d77afb4237.png",
+    "static/media/lakers.png": "/Descomplica-React/static/media/lakers.fd40560213c2f6d2fd85.png",
+    "static/media/selecao.png": "/Descomplica-React/static/media/selecao.ffac7a58eef986962d0d.png",
+    "static/media/mercurial.png": "/Descomplica-React/static/media/mercurial.48e920a4465f45f61b85.png",
+    "static/media/revolution.png": "/Descomplica-React/static/media/revolution.1505efd9865beaea896a.png",
+    "static/media/adidas.png": "/Descomplica-React/static/media/adidas.6e1c54988ea2da3f25d5.png",
+    "static/media/corinthians.png": "/Descomplica-React/static/media/corinthians.9832afe6be269184ef58.png",
+    "static/media/raquete.png": "/Descomplica-React/static/media/raquete.c7e8666cfba24b073f06.png",
+    "index.html": "/Descomplica-React/index.html",
+    "main.a6c77a54.css.map": "/Descomplica-React/static/css/main.a6c77a54.css.map",
+    "main.ab2f36be.js.map": "/Descomplica-React/static/js/main.ab2f36be.js.map",
+    "787.8258d309.chunk.js.map": "/Descomplica-React/static/js/787.8258d309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6c77a54.css",
+    "static/js/main.ab2f36be.js"
+  ]
+}

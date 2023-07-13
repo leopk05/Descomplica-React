@@ -6,8 +6,8 @@ export const AboutUs = () => {
     return (
         <div className="about-us">
             <div className="text-area">
-                <h2>Quem Somos</h2>
-                <div className="border">
+                <h2 id="about">Quem Somos</h2>
+                <div>
                     <p>
                         Bem-vindo a Squad, nossa loja de artigos esportivos, um espaço dedicado aos entusiastas de todas as
                         modalidades, onde a qualidade se une ao preço acessível.

@@ -4,31 +4,28 @@ import './Item.css';
 export const Item = (props) => {
 
 
-    const [state, setState] = useState(false);
+    let state = false;
 
-    const [msg, setMsg] = useState("Adicionar ao Carrinho");
+
     const upItem = () => {
         props.toCart(props.id)
-        setState(true)
-        setMsg("Adicionado")
     }
 
-    const clicked = () => {
-        setState(true)
-        setMsg("Adicionado")
+    for (let i = 0; i< props.idToRemoveHandle.length; i++){
+        if (props.idToRemoveHandle[i].id === props.id){
+            state = true;
+        }
     }
 
-    const originalState = () =>{
-        setState(false)
-        setMsg("Adicionar ao Carrinho")
-    }
+
+
 
     return (
        <div className="card-body">
            <img src={props.imgSrc} alt="item"/>
             <h3>{props.title}</h3>
-            <h4>R$ {props.price}</h4>
-            <button onClick={upItem} className={state? "unable": "able"} disabled={state}>{msg}</button>
+            <h4>R$ {props.price.toFixed(2)}</h4>
+            <button onClick={upItem} className={state? "unable": "able"} disabled={state}>{state? "Adicionado" : "Adicionar ao Carrinho"}</button>
        </div>
     )
 }

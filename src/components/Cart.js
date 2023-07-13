@@ -10,6 +10,10 @@ export const Cart = (props) => {
         props.toRemoveItem(id)
     }
 
+    const newQuantity = (value, id) => {
+        props.quantityHandler(value, id)
+    }
+
 
     if(props.onCart.length === 0){
         return (
@@ -29,10 +33,10 @@ export const Cart = (props) => {
                     <p className="qty">quantidade</p>
                 </div>
                 {props.onCart.map(item => (
-                    <ItemOnCart removeItem={getItemToRemove} key={item.id} quantity={item.quantity} id={item.id} imgItem={item.image} title={item.title} price={item.price}/>
+                    <ItemOnCart removeItem={getItemToRemove} newQuantityHandle={newQuantity} key={item.id} quantity={item.quantity} id={item.id} imgItem={item.image} title={item.title} price={item.price}/>
                 ))}
                 <div className="bot">
-                    <p>Valor Total R$ {total}</p>
+                    <p>Valor Total R$ {total.toFixed(2)}</p>
                     <button>Checkout</button>
                     <button onClick={props.closeCart}>Fechar</button>
                 </div>

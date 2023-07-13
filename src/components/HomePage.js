@@ -7,6 +7,8 @@ import {faCartShopping, faUser} from "@fortawesome/free-solid-svg-icons";
 
 
 
+
+
 const HomePage = (props) => {
 
     const changeState = () => {
@@ -29,8 +31,8 @@ const HomePage = (props) => {
 
             <div className="menu">
                 <div className="item">
-                    <h2 id="produtos"> Produtos</h2>
-                    <h2>Quem Somos</h2>
+                    <h2 id="produtos"><a href="#prod">Produtos</a></h2>
+                    <h2><a href="#about">Quem Somos</a></h2>
                     <h2 id="ajuda">Ajuda</h2>
                 </div>
             </div>

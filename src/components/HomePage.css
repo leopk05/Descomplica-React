@@ -5,10 +5,23 @@
     text-align: center;
 }
 
-.menu h2:hover{
-    cursor: pointer;
+.menu a:link{
+    text-decoration: none;
+    color: #424141;
+}
+
+.menu a:hover{
     color: #a7a5a5;
 }
+
+.menu a:visited{
+    text-decoration: none;
+}
+
+.menu a:link{
+    text-decoration: none;
+}
+
 
 .navbar{
     color: #424141;

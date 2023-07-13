@@ -21,11 +21,6 @@
   column-gap: 30px;
 }
 
-teste{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 @media (max-width: 1400px) {
   .card-items{

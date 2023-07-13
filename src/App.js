@@ -16,6 +16,7 @@ import Item from "./components/Item";
 import AboutUs from "./components/AboutUs";
 import {useState} from "react";
 import Cart from "./components/Cart";
+import Contact from "./components/Contact";
 
 const products = [
     {
@@ -102,16 +103,13 @@ function App() {
     const [cartItem, setCartItem] = useState(savedItems);
 
     const addToCart = (id) => {
-
         const item = {
             ...products[id],
             quantity: 1
         }
-
         setCartItem((prevState) => {
             return[item, ...prevState];
         });
-
     }
 
     const changeState = () =>{
@@ -127,15 +125,12 @@ function App() {
     }
 
     const idToRemove = (id) => {
-
         let index = -1
-
         for (let i = 0; i<cartItem.length; i++){
             if (cartItem[i].id === id){
                 index = i;
             }
         }
-
         if (cartItem.length===1){
             setCartItem(savedItems);
         } else {
@@ -143,26 +138,50 @@ function App() {
                 return[ ...cartItem.slice(0, index),
                     ...cartItem.slice(index + 1)];
             });
+
+
         }
-
-
-
-
     }
 
+    const handleQuantity = (value, id) => {
+
+        const item = {
+            ...products[id],
+            quantity: value
+        }
+
+        if (cartItem.length === 1) {
+            setCartItem([item]);
+        } else {
+
+            let index = -1;
+            for (let i = 0; i<cartItem.length; i++){
+                if (cartItem[i].id === id){
+                    index = i;
+                }
+            }
+
+            setCartItem(() => {
+                return[ ...cartItem.slice(0, index),item,
+                    ...cartItem.slice(index + 1)];
+            });
+
+        }
+    }
 
 
   return (
     <div className="App">
         <HomePage onChangeState={changeState}/>
-        {state? <Cart toRemoveItem={idToRemove} closeCart={toFalse} onCart={cartItem}/> : ""}
-        <h2>Produtos</h2>
+        {state? <Cart quantityHandler={handleQuantity} toRemoveItem={idToRemove} closeCart={toFalse} onCart={cartItem}/> : ""}
+        <h2 id="prod">Produtos</h2>
         <div className="card-items">
             {products.map(item => (
                 <Item idToRemoveHandle={cartItem} toCart={addToCart} key={item.id} id={item.id} imgSrc={item.image} title={item.title} price={item.price}/>
             ))}
         </div>
         <AboutUs/>
+        <Contact/>
     </div>
   );
 }

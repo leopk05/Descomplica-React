@@ -28,7 +28,7 @@ export const Contact = () => {
                     </p>
                 </div>
 
-                <div className="linhaa"></div>
+                <div className="line"></div>
                 <div className="help">
                     <h2>FALE CONOSCO</h2>
                     <p>DÚVIDAS SOBRE PRODUTO</p>
@@ -44,11 +44,9 @@ export const Contact = () => {
                         <FontAwesomeIcon icon={faEnvelope} className="green-social" size="2x" />
                         <p>CONTATO@SQUAD.COM</p>
                     </div>
-
                 </div>
-
-
             </footer>
+
             <div className="rights">
                 <p>política de privacidade |termo de uso</p>
             </div>

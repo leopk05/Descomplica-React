@@ -7,12 +7,6 @@
     height: 100%;
 }
 
-.card-body img{
-    margin-top: 10px;
-    width: 180px;
-    height: 180px;
-}
-
 .card-body h3{
     color: #424141;
     font-weight: normal;
@@ -24,6 +18,17 @@
     font-size: 23px;
     font-weight: bold;
 }
+
+.card-body img{
+    margin-top: 10px;
+    width: 180px;
+    height: 180px;
+}
+
+
+
+/*---- card button able/disable -----*/
+
 
 .card-body .able{
     padding: 10px;
@@ -38,7 +43,7 @@
     height: auto;
 }
 
-.unable{
+.card-body .unable{
     background: #A09C99;
     padding: 10px;
     width: 70%;

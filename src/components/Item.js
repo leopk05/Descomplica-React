@@ -17,9 +17,6 @@ export const Item = (props) => {
         }
     }
 
-
-
-
     return (
        <div className="card-body">
            <img src={props.imgSrc} alt="item"/>

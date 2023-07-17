@@ -1,45 +1,17 @@
-.menu h2{
-    color: #424141;
-    font-weight: normal;
-    width: auto;
-    text-align: center;
-}
 
-.menu a:link{
-    text-decoration: none;
-    color: #424141;
-}
+/*---- banner photo section---- */
 
-.menu a:hover{
-    color: #a7a5a5;
-}
-
-.menu a:visited{
-    text-decoration: none;
-}
-
-.menu a:link{
-    text-decoration: none;
+.banner{
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 
-.navbar{
-    color: #424141;
-    display: grid;
-    font-family: 'Inter', sans-serif;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-}
 
+/*---- menu links section---- */
 
-.navbar .menu{
-    grid-column: 1/3;
-
-}
-
-.item{
-    display: grid;
-    grid-template-columns: auto auto auto;
+#ajuda{
+    text-align: left;
 }
 
 #produtos{
@@ -47,18 +19,35 @@
     margin-left: 0;
 }
 
-#ajuda{
-    text-align: left;
+.links{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
-.user{
-    margin-right: 15px;
-}
-
-.user:hover{
-    cursor: pointer;
+.menu a:hover{
     color: #a7a5a5;
 }
+
+.menu a:link{
+    text-decoration: none;
+    color: #424141;
+}
+
+.menu a:visited{
+    text-decoration: none;
+}
+
+.menu h2{
+    color: #424141;
+    font-weight: normal;
+    width: auto;
+    text-align: center;
+}
+
+
+
+
+/*---- navbar/icons section---- */
 
 .cart{
     margin-right: 15px;
@@ -69,20 +58,48 @@
     color: #a7a5a5;
 }
 
+.navbar{
+    color: #424141;
+    display: grid;
+    font-family: 'Inter', sans-serif;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
 
+.user{
+    margin-right: 15px;
+}
 
-.banner{
-    width: 100%;
-    margin-bottom: 50px;
+.user-cart{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-self: center;
+}
+
+.user-cart input{
+    color: rgba(62, 62, 62, 1);
+    background-color: rgba(217, 217, 217, 1);
+    border: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.user:hover{
+    cursor: pointer;
+    color: #a7a5a5;
 }
 
 
 @media (max-width: 700px) {
-    #produtos{
-        text-align: center;
-    }
+    .user-cart{
 
-    #ajuda{
-        text-align: center;
     }
 }
+
+
+
+
+
+
+

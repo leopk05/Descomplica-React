@@ -1,3 +1,5 @@
+/*---- major section ----*/
+
 .about-us{
     height: 100%;
     min-height: 100vh;
@@ -6,15 +8,8 @@
     grid-template-columns: 2fr 1fr;
 }
 
-.about-us .text-area{
-    background: #A09C99;
-}
 
-.about-us img{
-    width: 100%;
-    height: 100%;
-}
-
+/*---- left side texts section ----*/
 
 .about-us h2{
     margin: 5% 10%;
@@ -27,19 +22,46 @@
     color: #424141;
 }
 
+.about-us .text-area{
+    background: #A09C99;
+    width: 100%;
+}
+
+.text-area .texts{
+    width: 100%;
+}
+
+/*---- right side img section ----*/
+
+.about-us img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
 @media (max-width: 900px) {
+    /*---- major section ----*/
+
     .about-us{
-        width: 100vw;
+        width: 100%;
         min-height: auto;
         display: grid;
         grid-template-columns: 1fr;
     }
 
 
+    /*---- left side texts section ----*/
+
     .about-us p{
         line-height: 1;
         font-size: 15px;
     }
+
+    /*---- right side img section ----*/
 
     .about-us img{
         display: none;
